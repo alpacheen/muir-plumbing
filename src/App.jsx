@@ -8,7 +8,7 @@ const App = () => {
   return (
     <>
     <section className='min-h-screen w-full bg-black'>
-      <div className='flex-col min-h-screen w-full items-center justify-center'>
+      <div className=' flex flex-col min-h-screen w-full items-center justify-center'>
         <TapSVG/>
         <WaterdropSVG/>
         <MuirSVG/>

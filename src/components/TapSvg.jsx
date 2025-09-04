@@ -5,7 +5,7 @@ const TapSVG = () => (
     height={131}
     viewBox="0 0 627 412"
     fill="none"
-    className="ml-7 mb-0 mt-0"
+    className="translate-y-20 translate-x-2"
     
   >
     <path
