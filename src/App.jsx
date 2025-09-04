@@ -7,9 +7,8 @@ import WaterdropSVG from './components/WaterdropSvg'
 const App = () => {
   return (
     <>
-    <section className=' flex w-full bg-black'>
-      MUIR PLUMBING
-      <div className='flex-col justify-center text-center'>
+    <section className='min-h-screen w-full bg-black'>
+      <div className='flex-col min-h-screen w-full items-center justify-center'>
         <TapSVG/>
         <WaterdropSVG/>
         <MuirSVG/>
