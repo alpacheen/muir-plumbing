@@ -1,17 +1,15 @@
 import React from 'react'
-import MuirSVG from './components/Muirsvg'
-import TapSVG from './components/TapSvg'
-import WaterdropSVG from './components/WaterdropSvg'
+import NavBar from './components/NavBar'
+import Loading from './components/Loading'
 
 
 const App = () => {
   return (
     <>
-    <section className='min-h-screen w-full bg-black'>
+        <Loading/>
+        <NavBar />
+    <section className='min-h-screen w-full bg-black pt-20'>
       <div className=' flex flex-col min-h-screen w-full items-center justify-center'>
-        <TapSVG/>
-        <WaterdropSVG/>
-        <MuirSVG/>
       </div>
     </section>
     </>
