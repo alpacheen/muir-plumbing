@@ -1,5 +1,5 @@
 import * as React from "react";
-import { delay, motion } from "framer-motion";
+import { motion } from "framer-motion";
 
 
   const pathVariants = {
@@ -9,8 +9,8 @@ import { delay, motion } from "framer-motion";
       pathLength: 1,
       fill: "#09D5FE",
       transition: {
-        pathLength: {duration: 16, ease: "easeInOut"},
-        fill: { duration: 5, ease: "easeInOut", delay: 1},
+        pathLength: {duration: 12, ease: "easeInOut", delay: 1},
+        fill: { duration:5 , ease: "easeInOut", delay:1.5 },
       },
     },
   };
@@ -19,13 +19,14 @@ const MuirSVG = () => (
   <motion.svg
   initial={{y:30, opacity:0}}
   animate={{y:0, opacity:1}}
-  transition={{duration:3, ease:"easeInOut", delay:1}}
+  transition={{duration:3, ease:"easeInOut", delay:0.5}}
     width={500}
     height={300}
     viewBox="0 0 1039 670"
     fill="none"
     stroke-linecap="round"
     stroke-linejoin="round"
+  
   >
     <motion.path
       variants={pathVariants}
