@@ -1,1 +1,18 @@
 @import "tailwindcss";
+@font-face {
+  font-family: "SuperWater";
+  src: url("./assets/fonts/SuperWater-PVoOm.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+:root{
+  --font-superwater: "SuperWater", sans-serif;
+}
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+
