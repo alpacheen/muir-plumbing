@@ -5,6 +5,7 @@ import React from "react";
 import Hero from "./Hero";
 
 
+
 const Loading = () => {
   return (
     <div className=" min-h-screen w-full bg-black">
