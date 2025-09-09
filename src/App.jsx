@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import NavBar from "./components/NavBar";
 import Loading from "./components/Loading";
 import Hero from "./components/Hero";
@@ -8,8 +8,6 @@ import Services from "./pages/Services";
 import Contact from "./pages/Contact";
 
 const App = () => {
-  
-  
   return (
     <>
       <NavBar />

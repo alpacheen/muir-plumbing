@@ -1,4 +1,4 @@
-import * as React from "react";
+import React, {useState, useEffect} from "react";
 import { motion } from "framer-motion";
 
 
@@ -15,12 +15,15 @@ import { motion } from "framer-motion";
     },
   };
 
+  
+
 const MuirSVG = () => (
+  
+
   <motion.svg
   initial={{y:30, opacity:0}}
   animate={{y:0, opacity:1}}
   transition={{duration:3, ease:"easeInOut", delay:0.5,}}
-  
 
     width={500}
     height={300}
