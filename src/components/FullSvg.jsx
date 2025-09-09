@@ -118,10 +118,10 @@ const FullSvg = ({fillColor = "#00A6e2", strokeColor="#00A6e2", strokeWidth=2, s
           </p>
 
           <div className="space-x-4">
-            <button className="bg-[#00a5fe] text-black px-8 py-4 rounded-lg font-semibold hover:bg-[#edece7] transition-colors">
+            <button className="bg-[#00a5fe] text-black px-8 py-4 rounded-lg font-semibold hover:bg-[#edece7] transition-colors cursor-pointer">
               Get Quote
             </button>
-            <button className="border border-[#09D5FE] text-[#09D5FE] px-8 py-4 rounded-lg font-semibold hover:bg-[#09D5FE] hover:text-black transition-colors">
+            <button className="border border-[#09D5FE] text-[#09D5FE] px-8 py-4 rounded-lg font-semibold hover:bg-[#09D5FE] hover:text-black transition-colors cursor-pointer">
               Emergency Service
             </button>
           </div>

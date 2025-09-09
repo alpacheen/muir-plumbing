@@ -4,7 +4,6 @@ import { Link } from "react-router-dom";
 
 const navLinks = [
   { name: "Home", to: "/" },
-  { name: "About", to: "/about" },
   { name: "Services", to: "/services" },
   { name: "Contact", to: "/contact" },
 ];
@@ -27,7 +26,7 @@ const NavBar = () => {
           initial={{ y: -50, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 1, delay: 3.7 }}
-        className="hidden items-center justify-center mx-auto space-x-8 md:hidden lg:flex py-4">
+        className="hidden items-center justify-center mx-auto space-x-8 md:hidden lg:flex py-4 ">
           {navLinks.map((link) => (
             <Link
               key={link.name}
@@ -69,8 +68,8 @@ const NavBar = () => {
           animate={{ opacity: 0.5 }}
           exit={{ opacity: 0 }}
           transition={{ duration: 0.3 }}
-          className="md:hidden fixed inset-0 bg-black z-40"
-          style={{ top: "73px" }}
+          className="md:hidden fixed inset-0 bg-black z-40 h-screen"
+         
           onClick={() => setIsMenuOpen(false)}
         />
       )}
@@ -79,7 +78,7 @@ const NavBar = () => {
         initial={{ x: "100%" }}
         animate={{ x: isMenuOpen ? 0 : "100%" }}
         transition={{ type: "tween", duration: 0.3, ease: "easeInOut" }}
-        className="fixed top-[73px] h-full w-screen bg-black border-l border-[#09d5fe] space-y-8 z-50"
+        className="fixed top-[73px] h-full w-screen bg-black border-l border-[#09d5fe] space-y-4 z-50"
       >
         <div className="flex flex-col h-full space-y-12 px-8 pt-12">
           {navLinks.map((link, index) => (

@@ -2,6 +2,7 @@ import React, {useState, useEffect} from "react";
 import { motion } from "framer-motion";
 import FullSvg from "./FullSvg";
 import Loading from "./Loading";
+import About from "../pages/About";
 
 const Hero = () => {
   const [loading, setLoading] = useState(false);
@@ -31,8 +32,8 @@ const Hero = () => {
   }, []);
 
   return (
-    <section className="h-screen w-full bg-black pb-10">
-      <div className="min-h-screen flex flex-col items-center justify-center mb-6">
+    <section className="h-screen w-full bg-[#231f20] pb-10">
+      <div className="min-h-screen flex flex-col items-center justify-center mb-0 ">
         {loading ? (
           <motion.div
             initial={{ opacity: 0 }}
@@ -53,6 +54,7 @@ const Hero = () => {
           </motion.div>
         )}
       </div>
+      {!loading && <About />}
     </section>
   );
 };
