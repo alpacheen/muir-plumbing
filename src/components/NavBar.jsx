@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
+import RollingBanner from "./RollingBanner";
 
 const navLinks = [
   { name: "Home", to: "/" },
@@ -17,6 +18,7 @@ const NavBar = () => {
 
   return (
     <>
+      <RollingBanner />
       <motion.nav
         initial={{ y: -50, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}

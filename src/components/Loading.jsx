@@ -17,7 +17,7 @@ const Loading = () => {
           <motion.p
             initial={{ y: 20, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
-            transition={{ duration: 0.8, delay: 3.7 }}
+            transition={{ duration: 0.8, delay: 3 }}
             className="text-xl md:text-3xl text-creme-fraiche mb-4 font-carter-one"
           >
             Professional Plumbing Services
@@ -26,7 +26,7 @@ const Loading = () => {
           <motion.div
             initial={{ y: 20, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
-            transition={{ duration: 0.8, delay: 4 }}
+            transition={{ duration: 0.8, delay: 3.1 }}
             className="space-x-4 text-lg font-carter-one"
           >
             <button className="bg-secondary text-black px-8 py-4 rounded-lg font-semibold hover:bg-amber-100 transition-colors ">

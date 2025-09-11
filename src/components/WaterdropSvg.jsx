@@ -4,7 +4,7 @@ const WaterdropSVG = () => (
   <motion.svg
     initial={{ y: -15, opacity: 0.5 }}
     animate={{ y: 0, opacity: 1 }}
-    transition={{ duration: 1, ease: "easeInOut", repeat: 3 }}
+    transition={{ duration: .75, ease: "easeInOut", repeat: 2 }}
     width={40}
     height={130}
     viewBox="0 0 96 138"

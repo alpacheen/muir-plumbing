@@ -9,8 +9,8 @@ import { motion } from "framer-motion";
       pathLength: 1,
       fill: "#00A6e2",
       transition: {
-        pathLength: {duration: 12, ease: "easeInOut", delay: 1},
-        fill: { duration:5 , ease: "easeInOut", delay:1.5 },
+        pathLength: {duration: 6.5, ease: "easeInOut", delay: 1},
+        fill: { duration:4.5 , ease: "easeInOut", delay:1.5 },
       },
     },
   };
@@ -21,7 +21,7 @@ const MuirSVG = () => (
   
 
   <motion.svg
-  initial={{y:30, opacity:0}}
+  initial={{y:25, opacity:0}}
   animate={{y:0, opacity:1}}
   transition={{duration:3, ease:"easeInOut", delay:0.5,}}
 
