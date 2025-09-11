@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 const sessionStorageKey = "hasVisitedBefore";
 
-const FullSvg = ({fillColor = "#00A6e2", strokeColor="#00A6e2", strokeWidth=2, showAnimation = true, showButtons = true, opacity=1}) => {
+const FullSvg = ({fillColor = "#00a6e2", strokeColor="#00A6e2", strokeWidth=2, showAnimation = true, showButtons = true, opacity=1}) => {
   const [hasVisited, setHasVisited] = useState(false);
   useEffect(() => {
     const visited = sessionStorage.getItem(sessionStorageKey);
@@ -113,15 +113,19 @@ const FullSvg = ({fillColor = "#00A6e2", strokeColor="#00A6e2", strokeWidth=2, s
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: showAnimation && !hasVisited ? 3 : 0 }}
         >
-          <p className="text-xl md:text-3xl text-[#edece7] mb-4">
+          <p className="text-xl md:text-3xl text-creme-fraiche mb-4 font-carter-one">
             Professional Plumbing Services
           </p>
 
-          <div className="space-x-4">
-            <button className="bg-[#00a5fe] text-black px-8 py-4 rounded-lg font-semibold hover:bg-[#edece7] transition-colors cursor-pointer">
+          <div className="space-x-4 font-carter-one text-lg">
+            <button className="bg-secondary text-black px-8 py-4 rounded-lg font-semibold hover:bg-winter-sky transition-colors cursor-pointer duration-300"
+            aria-label="Get a plumbing quote"
+            type="button">
               Get Quote
             </button>
-            <button className="border border-[#09D5FE] text-[#09D5FE] px-8 py-4 rounded-lg font-semibold hover:bg-[#09D5FE] hover:text-black transition-colors cursor-pointer">
+            <button className="border border-neon-blue text-[#09d5fe] px-8 py-4 rounded-lg font-semibold hover:bg-winter-sky hover:text-primary transition-colors cursor-pointer duration-300"
+            aria-label="Emergency service"
+            type="button">
               Emergency Service
             </button>
           </div>

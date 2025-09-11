@@ -4,20 +4,29 @@ import { motion } from "framer-motion";
 
 const About = () => {
   return (
-    <section className="h-screen w-full bg-[#231f20] text-white pt-16 mx-auto">
-      <h1
-        className="text-8xl text-center  z-50"
-        style={{ fontFamily: "var(--font-superwater)" }}
-      ></h1>
-      <p className="text-[#edece7] text-lg font-mono  m-6 text-center md:text-2xl p-2 ">
-        Muir Plumbing is a family-owned and operated business with over 5 years
-        of experience in the plumbing industry. We pride ourselves on delivering
-        high-quality services to both residential and commercial clients. Our
-        team of licensed plumbers is dedicated to providing reliable, efficient,
-        and affordable solutions for all your plumbing needs. Whether it's a
-        simple repair or a complex installation, we are committed to ensuring
-        customer satisfaction with every job we undertake.
-      </p>
+    <section className="h-screen w-full bg-primary text-primary pt-16 mx-auto"
+    aria-label="about-section">
+      <div className="flex flex-col mx-auto items-center justify-center text-center  z-50 max-w-3xl">
+        <h1
+          className="text-8xl  text-creme-fraiche"
+          style={{ fontFamily: "var(--font-superwater)" }}
+          id="about-heading"
+          aria-labelledby="about-heading"
+        >About us</h1>
+        <motion.p
+         className="text-creme-fraiche text-lg font-carter-one m-6  md:text-2xl lg:text-3xl p-2 leading-12">
+          Muir Plumbing is a family-owned and operated business with <span className="text-secondary text-2xl md:text-3xl ">
+            over 5 years
+            of experience
+          </span> in the plumbing industry. We pride ourselves on delivering
+          <span
+          className="text-secondary text-3xl"> high-quality services </span>to both residential and commercial clients. Our
+          team of licensed plumbers is dedicated to providing <span className="text-secondary text- bold text-3xl">reliable</span>,<span className="text-secondary text-3xl"> efficient</span>,
+          and <span className="text-secondary text-3xl ">affordable</span> solutions for all your plumbing needs. Whether it's a
+          simple repair or a complex installation, we are committed to ensuring
+          <span className="text-secondary text-3xl"> customer satisfaction with every job </span>we undertake.
+        </motion.p>
+      </div>
   
       <motion.div
         initial={{ opacity: 0 }}

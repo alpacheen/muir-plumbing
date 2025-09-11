@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Carter+One&family=Galindo&family=PT+Serif+Caption:ital@0;1&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 @import "tailwindcss";
 @font-face {
   font-family: "SuperWater";
@@ -8,12 +9,31 @@
 
 
 :root{
+  
   --font-superwater: "SuperWater", sans-serif;
 }
+@theme{
+  --color-primary: #231f20;
+  --color-secondary: #00a6e2;
+  --color-neon-blue: #09d5fe;
+  --color-winter-sky: #9de9ff;
+  --color-creme-fraiche: #edecd7;
+  --font-superwater: "SuperWater", sans-serif;
+  --font-roboto: 'Roboto', sans-serif;
+  --font-pt-serif: 'PT Serif Caption', serif;
+  --font-galindo: 'Galindo', cursive;
+  --font-carter-one: 'Carter One', cursive;
+}
+
 
 
 html {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
   scroll-behavior: smooth;
+  
 }
+
 
 

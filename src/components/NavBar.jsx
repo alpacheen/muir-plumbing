@@ -17,27 +17,28 @@ const NavBar = () => {
 
   return (
     <>
-      <nav
-        className="fixed top-0 w-full border-b border-[#09d5fe] text-2xl text-[#Edecd7] bg-black/80 backdrop-blur-sm z-30"
+      <motion.nav
+        initial={{ y: -50, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ duration: 1, delay: 3.7 }}
+        className="fixed top-0 w-full border-b border-[#09d5fe] text-2xl text-[#Edecd7] bg-primary backdrop-blur-sm z-30"
         style={{ fontFamily: "var(--font-superwater)" }}
+        aria-label="Main Navigation"
+        id="nav-bar"
       >
         {/* Desktop  */}
-        <motion.div
-          initial={{ y: -50, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
-          transition={{ duration: 1, delay: 3.7 }}
-        className="hidden items-center justify-center mx-auto space-x-8 md:hidden lg:flex py-4 ">
+        <div className="hidden items-center justify-center mx-auto space-x-8 md:hidden lg:flex py-4 ">
           {navLinks.map((link) => (
             <Link
               key={link.name}
               to={link.to}
-              className="px-3 py-2 hover:text-[#09d5fe] transition-colors duration-300"
+              className="px-3 py-2 hover:text-[#48dafe] transition-colors duration-300"
             >
               {link.name}
             </Link>
           ))}
-        </motion.div>
-        {/* Mobile */}
+        </div>
+        {/* {Mobile} */}
         <button
           className="absolute top-4 right-4 focus:outline-none lg:hidden"
           onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -60,26 +61,35 @@ const NavBar = () => {
             )}
           </div>
         </button>
-      </nav>
+      </motion.nav>
       {/* Mobile Overlay */}
       {isMenuOpen && (
         <motion.div
           initial={{ opacity: 0 }}
-          animate={{ opacity: 0.5 }}
-          exit={{ opacity: 0 }}
+          animate={{ opacity: 0 }}
+          exit={{ opacity: 1 }}
           transition={{ duration: 0.3 }}
-          className="md:hidden fixed inset-0 bg-black z-40 h-screen"
-         
+          className="md:hidden fixed inset-0 bg-primary z-40 h-screen"
           onClick={() => setIsMenuOpen(false)}
         />
       )}
       {/* Mobile Menu */}
       <motion.div
         initial={{ x: "100%" }}
-        animate={{ x: isMenuOpen ? 0 : "100%" }}
+        animate={{ x: isMenuOpen ? 0 : "100%", opacity: isMenuOpen ? 0.85 : 0 }}
         transition={{ type: "tween", duration: 0.3, ease: "easeInOut" }}
-        className="fixed top-[73px] h-full w-screen bg-black border-l border-[#09d5fe] space-y-4 z-50"
+        className="fixed top-0 h-screen w-screen border-l border-[#09d5fe] space-y-4 z-50 bg-primary backdrop-blur-md lg:hidden"
       >
+        <div className="flex justify-end p-4">
+          <button>
+            <img
+              src="/src/assets/waterdrop.svg"
+              alt="Close Menu"
+              className="w-8 h-8 cursor-pointer"
+              onClick={() => setIsMenuOpen(false)}
+            />
+          </button>
+        </div>
         <div className="flex flex-col h-full space-y-12 px-8 pt-12">
           {navLinks.map((link, index) => (
             <motion.div
@@ -92,7 +102,7 @@ const NavBar = () => {
                 to={link.to}
                 onClick={handleClick}
                 style={{ fontFamily: "var(--font-superwater)" }}
-                className="text-5xl text-[#EDECD7] hover:text-[#09d5fe] transition-colors duration-300"
+                className="text-5xl text-[#EDECD7] hover:text-[#48dafe] transition-colors duration-300"
               >
                 {link.name}
               </Link>
