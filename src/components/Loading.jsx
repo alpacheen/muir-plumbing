@@ -3,6 +3,7 @@ import MuirSVG from "./Muirsvg";
 import TapSVG from "./TapSvg";
 import WaterdropSVG from "./WaterdropSvg";
 import { motion } from "framer-motion";
+import RollingBanner from "./UI/RollingBanner";
 
 
 
@@ -37,6 +38,7 @@ const Loading = () => {
             </button>
           </motion.div>
         </div>
+      
       </div>
     </div>
   );

@@ -10,18 +10,18 @@ const RollingBanner = () => {
     "Affordable Rates",
     "Licensed & Insured Professionals",
     "Customer Satisfaction Guaranteed",
-    "Call (07) 1234-5678",
     "Service Areas: Brisbane, Gold Coast, Sunshine Coast",
     ]
   return (
-    <div className='bg-gradient-to-r from-secondary to-neon-blue text-creme-fraiche '>
+    <div className='bg-transparent  text-secondary mt-10 font-carter-one'>
         {/* Container for the rolling banner */}
-        <div className='relative overflow-hidden py-2 text-sm font-medium cursor-pointer '
+        <div className=' py-2 text-sm font-medium cursor-pointer'
         onMouseEnter={() => setIsPaused(true)}
         onMouseLeave={() => setIsPaused(false)}
         >
-            <motion.div className='flex whitespace-nowrap'
-            animate={isPaused ? {x:0} : {x:[-1000,1000]}}
+            <motion.div className='flex
+             items-center whitespace-rap'
+            animate={isPaused ? {x:0} : {x:[-50,50]}}
             transition={{
                 x: {
                     repeat: isPaused ? 0 : Infinity,
@@ -32,7 +32,7 @@ const RollingBanner = () => {
             }}
             >
                 {bannerList.map((text, index) => (
-                    <span key={index} className='mx-4'>
+                    <span key={index} className='mx-4 text-lg'>
                         {text}
                     </span>
                 ))}

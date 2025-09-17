@@ -35,5 +35,63 @@ html {
   
 }
 
+.btn-primary {
+  @apply bg-secondary text-black px-8 py-4 rounded-lg font-semibold font-carter-one
+         hover:bg-winter-sky transition-colors duration-300 cursor-pointer;
+}
 
+.btn-secondary {
+  @apply border border-neon-blue text-neon-blue px-8 py-4 rounded-lg font-semibold font-carter-one
+         hover:bg-winter-sky hover:text-primary transition-colors duration-300 cursor-pointer;
+}
+
+/*  TEXT HIGHLIGHTS */
+.text-highlight {
+  @apply text-secondary font-bold;
+}
+
+.text-highlight-lg {
+  @apply text-secondary text-2xl md:text-3xl font-bold;
+}
+
+/* 3. SERVICE CARDS */
+.service-card {
+  @apply bg-secondary/75 rounded-lg p-4 md:p-6 border-0 w-3/4 md:w-3/4 lg:w-1/2
+         text-xl md:text-2xl my-4 cursor-pointer text-creme-fraiche  
+         transition-colors duration-300 text-center list-none;
+}
+
+.service-title {
+  @apply text-2xl md:text-4xl cursor-pointer transition-colors duration-300
+  /* text-shadow-lg text-shadow-primary */
+  hover:text-shadow-primary 
+         hover:text-secondary bg-winter-sky/75 p-2 border-4 border-primary 
+         rounded-xl;
+  font-family: var(--font-superwater);
+}
+
+.service-content {
+  @apply text-primary text-lg font-carter-one md:text-xl bg-winter-sky 
+         rounded-xl border-4 border-primary;
+}
+
+.service-item {
+  @apply flex items-center text-xl md:text-2xl p-1;
+}
+
+/* 4. FORM INPUTS - Used in Contact form */
+.form-input {
+  @apply text-2xl border-4 border-primary rounded-lg p-3 text-primary bg-winter-sky
+         focus:ring-2 focus:ring-secondary focus:outline-none transition-all duration-200;
+}
+
+.form-container {
+  @apply grid grid-cols-1 gap-0.5 m-2 p-4 border-3 border-winter-sky rounded-lg 
+         space-y-4 mx-auto max-w-xl px-4 text-center bg-secondary/75 font-carter-one;
+}
+
+
+.text-body-responsive {
+  @apply text-lg md:text-2xl lg:text-3xl text-creme-fraiche font-carter-one leading-relaxed;
+}
 

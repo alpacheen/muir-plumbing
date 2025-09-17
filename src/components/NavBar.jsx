@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import { Link } from "react-router-dom";
-import RollingBanner from "./RollingBanner";
+import { Link } from "react-router-dom";;
+
 
 const navLinks = [
   { name: "Home", to: "/" },
@@ -18,11 +18,11 @@ const NavBar = () => {
 
   return (
     <>
-      <RollingBanner />
+     
       <motion.nav
         initial={{ y: -50, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
-        transition={{ duration: 1, delay: 3.7 }}
+        transition={{ duration: 1, delay: 3 }}
         className="fixed top-0 w-full border-b border-[#09d5fe] text-2xl text-[#Edecd7] bg-primary backdrop-blur-sm z-30"
         style={{ fontFamily: "var(--font-superwater)" }}
         aria-label="Main Navigation"
@@ -67,19 +67,19 @@ const NavBar = () => {
       {/* Mobile Overlay */}
       {isMenuOpen && (
         <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 0 }}
-          exit={{ opacity: 1 }}
-          transition={{ duration: 0.3 }}
-          className="md:hidden fixed inset-0 bg-primary z-40 h-screen"
-          onClick={() => setIsMenuOpen(false)}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 1 }}
+        transition={{ duration: 0.3 }}
+        className="md:hidden fixed inset-0 bg-primary z-40 h-screen"
+        onClick={() => setIsMenuOpen(false)}
         />
       )}
       {/* Mobile Menu */}
       <motion.div
         initial={{ x: "100%" }}
-        animate={{ x: isMenuOpen ? 0 : "100%", opacity: isMenuOpen ? 0.85 : 0 }}
-        transition={{ type: "tween", duration: 0.3, ease: "easeInOut" }}
+        animate={{ x: isMenuOpen ? 0 : "100%", opacity: isMenuOpen ? .90 : 0 }}
+        transition={{ type: "tween", duration: .4, ease: "easeInOut" }}
         className="fixed top-0 h-screen w-screen border-l border-[#09d5fe] space-y-4 z-50 bg-primary backdrop-blur-md lg:hidden"
       >
         <div className="flex justify-end p-4">
@@ -95,10 +95,10 @@ const NavBar = () => {
         <div className="flex flex-col h-full space-y-12 px-8 pt-12">
           {navLinks.map((link, index) => (
             <motion.div
-              key={link.name}
-              initial={{ x: 50, opacity: 0 }}
-              animate={{ x: 0, opacity: isMenuOpen ? 1 : 0 }}
-              transition={{ delay: 0.1 * index }}
+            key={link.name}
+            initial={{ x: 50, opacity: 0 }}
+            animate={{ x: 0, opacity: isMenuOpen ? 1 : 0 }}
+            transition={{ delay: 0.1 * index }}
             >
               <Link
                 to={link.to}
@@ -112,6 +112,7 @@ const NavBar = () => {
           ))}
         </div>
       </motion.div>
+    
     </>
   );
 };
