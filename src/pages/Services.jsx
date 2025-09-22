@@ -58,14 +58,14 @@ const Services = () => {
                     transition={{ duration: 0.3 }}
                     className="service-item "
                   >
-                    <MdPlumbing className="text-primary mr-2 flex-shrink-0 text-2xl" />
+                    <MdPlumbing className="text-primary mr-2 flex-shrink-0 text-lg md:text-2xl lg:text-2xl" />
                     {item}
                   </motion.li>
                 ))}
               </ul>
 
               {service.description && (
-                <p className="text-primary bg-winter-sky border-4 border-primary rounded-2xl font-carter-one mt-4 md:text-2xl mx-auto p-2">
+                <p className="text-primary bg-winter-sky border-4 border-primary rounded-2xl font-carter-one mt-4 text-sm md:text-2xl mx-auto p-2">
                   {service.description}
                 </p>
               )}

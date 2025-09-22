@@ -42,7 +42,7 @@ const NavBar = () => {
         </div>
         {/* {Mobile} */}
         <button
-          className="absolute top-4 right-4 focus:outline-none lg:hidden"
+          className="absolute top-4 right-8 focus:outline-none lg:hidden"
           onClick={() => setIsMenuOpen(!isMenuOpen)}
           aria-label="Toggle Menu"
           aria-expanded={isMenuOpen}
@@ -116,5 +116,5 @@ const NavBar = () => {
     </>
   );
 };
-
 export default NavBar;
+

@@ -41,6 +41,8 @@ const Hero = () => {
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               transition={{ duration: 0.001 }}
+              className="scale-50 lg:scale-100 md:scale-100"
+              
             >
               <Loading />
             </motion.div>
@@ -49,6 +51,7 @@ const Hero = () => {
               initial={{ opacity: hasLoadedBefore ? 1 : 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: hasLoadedBefore ? 0 : 0.001 }}
+              className="scale-50 lg:scale-100 md:scale-100"
             >
               <FullSvg showButtons={true}
               showAnimation={false} />

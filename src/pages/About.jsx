@@ -16,7 +16,8 @@ const About = () => {
       backgroundSvg={false}
     >
       <div className="flex flex-col mx-auto items-center justify-center text-center z-50 max-w-3xl">
-        <motion.p className="text-body-responsive m-6 p-2">
+        <motion.p
+         className="text-body-responsive m-6 p-2">
           Muir Plumbing is a family-owned and operated business with{" "}
           <span className="text-highlight">over 5 years of experience</span> in
           the plumbing industry. We pride ourselves on delivering{" "}

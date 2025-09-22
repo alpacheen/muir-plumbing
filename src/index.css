@@ -6,6 +6,34 @@
   font-weight: normal;
   font-style: normal;
 }
+html, body, #root {
+  background-color: #231f20 !important; /* Your primary color */
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* Smooth transitions */
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Ensure proper layering */
+.page-transition {
+  position: relative;
+  z-index: 1;
+  will-change: transform, opacity, clip-path;
+}
+
+/* Remove any default margins that might cause white space */
+body {
+  margin: 0;
+  padding: 0;
+}
+
+#root {
+  isolation: isolate;
+}
 
 
 :root{
@@ -63,7 +91,7 @@ html {
 
 .service-title {
   @apply text-2xl md:text-4xl cursor-pointer transition-colors duration-300
-  /* text-shadow-lg text-shadow-primary */
+  text-shadow-lg text-shadow-primary
   hover:text-shadow-primary 
          hover:text-secondary bg-winter-sky/75 p-2 border-4 border-primary 
          rounded-xl;
@@ -71,12 +99,12 @@ html {
 }
 
 .service-content {
-  @apply text-primary text-lg font-carter-one md:text-xl bg-winter-sky 
+  @apply text-primary font-carter-one  md:text-xl bg-winter-sky 
          rounded-xl border-4 border-primary;
 }
 
 .service-item {
-  @apply flex items-center text-xl md:text-2xl p-1;
+  @apply flex items-center text-sm md:text-2xl  p-1;
 }
 
 /* 4. FORM INPUTS - Used in Contact form */
@@ -87,11 +115,11 @@ html {
 
 .form-container {
   @apply grid grid-cols-1 gap-0.5 m-2 p-4 border-3 border-winter-sky rounded-lg 
-         space-y-4 mx-auto max-w-xl px-4 text-center bg-secondary/75 font-carter-one;
+         space-y-4 mx-auto max-w-sm px-4 text-center bg-secondary/75 font-carter-one;
 }
 
 
-.text-body-responsive {
+.form-responsive {
   @apply text-lg md:text-2xl lg:text-3xl text-creme-fraiche font-carter-one leading-relaxed;
 }
 

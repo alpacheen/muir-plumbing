@@ -23,7 +23,7 @@ const InputForm = () => {
 
   return (
     <form
-      className="grid grid-cols-1 gap-0.5 m-2 p-4 border-3 border-winter-sky rounded-lg space-y-4 mx-auto max-w-xl px-4 text-center bg-secondary/75 font-carter-one"
+      className="form-container"
       method="POST"
     >
       <input
@@ -34,7 +34,7 @@ const InputForm = () => {
         value={formData.name}
         onChange={handleChange}
         required
-        className="form p-3 rounded-lg border-4 border-primary bg-winter-sky text-2xl text-black"
+        className="form form-input"
       />
       <br />
       <input
@@ -45,7 +45,7 @@ const InputForm = () => {
         value={formData.email}
         onChange={handleChange}
         required
-        className="form text-2xl border-4 border-primary rounded-lg p-3 text-primary bg-winter-sky"
+        className="form-input"
       />
       <br />
       <input
@@ -56,7 +56,7 @@ const InputForm = () => {
         value={formData.phone}
         onChange={handleChange}
         required
-        className="form text-2xl border-4 border-primary rounded-lg p-3 text-primary bg-winter-sky"
+        className="form form-input"
       />
       <br />
       <textarea
@@ -66,7 +66,7 @@ const InputForm = () => {
         value={formData.message}
         onChange={handleChange}
         required
-        className="form text-2xl border-4 border-primary  rounded-lg p-3 text-primary h-32 resize-none bg-winter-sky focus:ring-0 focus:outline-none"
+        className="form form-input"
       ></textarea>
       <br />
       <button

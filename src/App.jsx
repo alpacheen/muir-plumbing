@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React from "react";
 import { Routes, Route } from "react-router-dom";
 import NavBar from "./components/NavBar";
 import Hero from "./components/Hero";
@@ -7,7 +7,6 @@ import Services from "./pages/Services";
 import Contact from "./pages/Contact";
 
 const App = () => {
-  
   return (
     <>
       <NavBar />
