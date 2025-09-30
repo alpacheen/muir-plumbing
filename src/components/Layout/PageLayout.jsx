@@ -20,7 +20,7 @@ const PageLayout = ({title, children, backgroundSvg = true, svgProps = {}, conta
     {...props}
     >
         <h1
-        className={`text-3xl md:text-6xl lg:text-8xl text-center text-creme-fraiche ${titleClassName}`}
+        className={`text-3xl md:text-6xl lg:text-8xl text-center mt-10 text-creme-fraiche ${titleClassName}`}
         style={{ fontFamily: "var(--font-superwater)" }}
         id={`${title.toLowerCase()}-heading`}
         aria-labelledby={`${title.toLowerCase()}-heading`}

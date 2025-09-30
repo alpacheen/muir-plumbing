@@ -7,25 +7,23 @@
   font-style: normal;
 }
 html, body, #root {
-  background-color: #231f20 !important; /* Your primary color */
+  background-color: #231f20 !important; 
   min-height: 100vh;
   overflow-x: hidden;
 }
 
-/* Smooth transitions */
+
 * {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Ensure proper layering */
 .page-transition {
   position: relative;
   z-index: 1;
   will-change: transform, opacity, clip-path;
 }
 
-/* Remove any default margins that might cause white space */
 body {
   margin: 0;
   padding: 0;
@@ -63,6 +61,8 @@ html {
   
 }
 
+/*BUTTONS*/
+
 .btn-primary {
   @apply bg-secondary text-black px-8 py-4 rounded-lg font-semibold font-carter-one
          hover:bg-winter-sky transition-colors duration-300 cursor-pointer;
@@ -72,25 +72,46 @@ html {
   @apply border border-neon-blue text-neon-blue px-8 py-4 rounded-lg font-semibold font-carter-one
          hover:bg-winter-sky hover:text-primary transition-colors duration-300 cursor-pointer;
 }
+@media (min-width: 640px){
+  .btn-primary, .btn-secondary {
+    @apply px-6 py-3 text-base;
+  }
+}
 
-/*  TEXT HIGHLIGHTS */
+@media(min-width:1024px){
+  .btn-primary, .btn-secondary {
+    @apply px-8 py-4 text-lg;
+  }
+}
+
+/* TEXT */
 .text-highlight {
   @apply text-secondary font-bold;
 }
 
 .text-highlight-lg {
-  @apply text-secondary text-2xl md:text-3xl font-bold;
+  @apply text-secondary text-lg font-bold;
+}
+@media(min-width:640px){
+  .text-highlight-lg{
+    @apply text-xl;
+  }
+}
+@media(min-width:1024px){
+  .text-highlight-lg{
+    @apply text-2xl
+  }
 }
 
-/* 3. SERVICE CARDS */
+/* SERVICE CARDS */
 .service-card {
-  @apply bg-secondary/75 rounded-lg p-4 md:p-6 border-0 w-3/4 md:w-3/4 lg:w-1/2
-         text-xl md:text-2xl my-4 cursor-pointer text-creme-fraiche  
+  @apply bg-secondary/75 rounded-lg p-3  border-0 w-full mx-2
+         text-lg my-4 cursor-pointer text-creme-fraiche  
          transition-colors duration-300 text-center list-none;
 }
 
 .service-title {
-  @apply text-2xl md:text-4xl cursor-pointer transition-colors duration-300
+  @apply text-lg cursor-pointer transition-colors duration-300
   text-shadow-lg text-shadow-primary
   hover:text-shadow-primary 
          hover:text-secondary bg-winter-sky/75 p-2 border-4 border-primary 
@@ -99,27 +120,165 @@ html {
 }
 
 .service-content {
-  @apply text-primary font-carter-one  md:text-xl bg-winter-sky 
-         rounded-xl border-4 border-primary;
+  @apply text-primary font-carter-one  bg-winter-sky 
+         rounded-xl border-4 border-primary p-2;
 }
 
 .service-item {
-  @apply flex items-center text-sm md:text-2xl  p-1;
+  @apply flex items-center text-sm p-1;
 }
 
-/* 4. FORM INPUTS - Used in Contact form */
+@media(min-width:640px){
+  .service-card {
+    @apply p-4 text-xl w-3/4;
+  }
+  .service-title{
+    @apply text-xl border-3;
+  }
+  .service-content{
+    @apply text-lg border-3 p-3;
+  }
+  .service-item{
+    @apply text-base p-2;
+  }
+}
+@media(min-width:1024px){
+  .service-card{
+    @apply p-6 text-2xl w-1/2;
+  }
+  .service-title{
+    @apply text-2xl border-4;
+  }
+  .service-content{
+    @apply text-2xl border-4 p-4;
+  }
+  .service-item{
+    @apply text-2xl p-2
+  }
+}
+@media(min-width:1280px){
+  .service-title{
+    @apply text-3xl
+  }
+  .service-content{
+    @apply text-2xl
+  }
+  .service.item{
+    @apply text-xl
+  }
+}
+
+
+/* FORM INPUTS */
 .form-input {
-  @apply text-2xl border-4 border-primary rounded-lg p-3 text-primary bg-winter-sky
-         focus:ring-2 focus:ring-secondary focus:outline-none transition-all duration-200;
+  @apply text-base border-4 border-primary rounded-lg p-2 text-primary bg-winter-sky
+         focus:ring-2 focus:ring-secondary focus:outline-none transition-all duration-200 w-full;
 }
 
 .form-container {
-  @apply grid grid-cols-1 gap-0.5 m-2 p-4 border-3 border-winter-sky rounded-lg 
-         space-y-4 mx-auto max-w-sm px-4 text-center bg-secondary/75 font-carter-one;
+  @apply grid grid-cols-1 gap-1 m-2 p-3 border-2 border-winter-sky rounded-lg 
+         space-y-2 mx-auto w-full max-w-sm px-4 text-center bg-secondary/75 font-carter-one;
 }
 
-
-.form-responsive {
-  @apply text-lg md:text-2xl lg:text-3xl text-creme-fraiche font-carter-one leading-relaxed;
+@media(min-width:640px){
+  .form-input {
+    @apply text-lg p-3 border-3;
+  }
+  .form-container{
+    @apply p-4 gap-1 space-y-2 border-2;
+  }
 }
 
+@media(min-width:1024px){
+  .form-input{
+    @apply text-xl p-4 border-4;
+  }
+  .form-container{
+    @apply p-4 gap-2 space-y-4 border-4;
+  }
+}
+
+/*Body-Text*/
+
+.text-body-responsive{
+  @apply text-base leading-relaxed
+  font-carter-one text-creme-fraiche;
+}
+@media(min-width:640px){
+  .text-body-responsive{
+  @apply text-lg;
+}
+}
+@media(min-width:1024px){
+  .text-body-responsive{
+    @apply text-xl;
+  }
+}
+@media(min-width:1280px){
+  .text-body-responsive{
+    @apply text-2xl
+  }
+}
+
+/*Page titles*/
+.page-title-responsive{
+  @apply text-2xl font-bold text-center text-creme-fraiche mb-4;
+  font-family: var(--font-superwater);
+}
+
+@media(min-width:640px){
+  .page-title-responsive{
+    @apply text-4xl mb-6;
+  }
+}
+@media(min-width:1024px){
+  .page-title-responsive{
+    @apply text-6xl mb-8;
+  }
+}
+@media(min-width:1280px){
+  .page-title-responsive{
+    @apply text-8xl mb-12;
+  }
+}
+
+/*Container Spacing*/
+.section-padding{
+  @apply py-8 px-4
+}
+@media(min-width:640px){
+  .section-padding{
+    @apply py-12 px-6
+  }
+}
+@media(min-width:1024px){
+  .section-padding{
+    @apply py-16 px-8
+  }
+}
+@media(min-width:1280px){
+  .section-padding{
+    @apply py-20 px-12
+  }
+}
+
+.wave{
+  --size: 50px;
+  --m: 0.5;
+  --p: calc(var(--m)*var(--size));
+  --R: calc(var(--size)*sqrt(var(--m)*var(--m) + 1));
+
+  mask:
+    radial-gradient(var(--R) at 50% calc(100% - (var(--size) + var(--p))), #000 99%, #0000 101%)
+      calc(50% - 2 * var(--size)) 0/calc(4 * var(--size)) 100%,
+    radial-gradient(var(--R) at 50% calc(100% + var(--p)), #0000 99%, #000 101%) 
+      50% calc(100% - var(--size)) / calc(4 * var(--size)) 100% repeat-x;
+      /* --mask:
+    radial-gradient(58.31px at 80px 50%,#000 99%,#0000 101%) 0 calc(50% - 100px)/100% 200px,
+    radial-gradient(58.31px at -30px 50%,#0000 99%,#000 101%) 50px 50%/100% 200px repeat-y;
+  -webkit-mask: var(--mask);
+          mask: var(--mask); */
+  background: linear-gradient(360deg, var(--color-secondary),var(--color-primary));
+  height: screen;
+
+}

@@ -11,13 +11,15 @@ const Services = () => {
     <PageLayout
       title="Services"
       ariaLabel="services-section"
+      containerClassName="section-padding"
+      titleClassName="page-title-responsive"
       svgProps={{
         fillColor: "lightblue",
         strokeColor: "lightblue",
         opacity: 0.2,
       }}
     >
-      <div className="mx-auto flex flex-col justify-center items-center">
+      <div className="mx-auto flex flex-col justify-center items-center px-4">
         {services.map((service, index) => (
           <motion.li
             key={service.id}
@@ -36,6 +38,7 @@ const Services = () => {
               whileHover={{ scale: 1.05 }}
               transition={{ type: "spring", stiffness: 300 }}
             >
+              {/* <span className="mr-2 text-2xl">{service.icon}</span> */}
               {service.title}
             </motion.h2>
 
@@ -58,14 +61,14 @@ const Services = () => {
                     transition={{ duration: 0.3 }}
                     className="service-item "
                   >
-                    <MdPlumbing className="text-primary mr-2 flex-shrink-0 text-lg md:text-2xl lg:text-2xl" />
+                    <MdPlumbing className="text-primary mr-2 flex-shrink-0 text-lg md:text-xl lg:text-2xl" />
                     {item}
                   </motion.li>
                 ))}
               </ul>
 
               {service.description && (
-                <p className="text-primary bg-winter-sky border-4 border-primary rounded-2xl font-carter-one mt-4 text-sm md:text-2xl mx-auto p-2">
+                <p className="text-primary bg-winter-sky border-2 sm:border-3 lg:border-4 border-primary rounded-2xl font-carter-one mt-4 text-sm sm:text-base md:text-2xl lg:text-2xl mx-auto p-2 sm:p-3 lg:p-4">
                   {service.description}
                 </p>
               )}
@@ -80,9 +83,36 @@ const Services = () => {
                 alt="expand service details"
                 className="w-6 h-6 brightness-0"
               />
+              <svg 
+                className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6 text-creme-fraiche"
+                fill="currentColor" 
+                viewBox="0 0 20 20"
+                aria-hidden="true"
+              >
+                <path fillRule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clipRule="evenodd" />
+              </svg>
             </motion.div>
           </motion.li>
         ))}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+          className="mt-8 text-center"
+        >
+          <p className="text-body-responsive mb-6">
+            Need help with any of these services?
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="tel:0712345678" className="btn-primary">
+              Call (07) 1234-5678
+            </a>
+            <a href="/contact" className="btn-secondary">
+              Get Free Quote
+            </a>
+          </div>
+        </motion.div>
       </div>
     </PageLayout>
   );
