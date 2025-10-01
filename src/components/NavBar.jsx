@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { motion, AnimatePresence, delay, easeInOut } from "framer-motion";
+import { motion, AnimatePresence, easeInOut } from "framer-motion";
 import { Link } from "react-router-dom";
 
 const navLinks = [
@@ -69,7 +69,7 @@ const NavBar = () => {
         id="nav-bar"
       >
         {/* Desktop  */}
-        <div className="hidden items-center justify-center mx-auto space-x-8 md:hidden lg:flex py-4 ">
+        <div className="hidden items-center justify-center mx-auto space-x-8 md:flex lg:flex py-4 ">
           {navLinks.map((link) => (
             <Link
               key={link.name}
@@ -82,7 +82,7 @@ const NavBar = () => {
         </div>
         {/* {Mobile} */}
         <button
-          className="absolute top-4 right-4 focus:outline-none lg:hidden"
+          className="absolute top-4 right-4 focus:outline-none md:hidden"
           onClick={() => setIsMenuOpen(!isMenuOpen)}
           aria-label="Toggle Menu"
           aria-expanded={isMenuOpen}
@@ -90,13 +90,13 @@ const NavBar = () => {
           <div>
             {isMenuOpen ? (
               <img
-                src="/src/assets/waterdrop.svg"
+                src="/images/waterdrop.svg"
                 alt="Close Menu"
                 className="w-8 h-8 cursor-pointer"
               />
             ) : (
               <img
-                src="/src/assets/tap.svg"
+                src="/images/tap.svg"
                 alt="Open Menu"
                 className="w-8 h-8 cursor-pointer"
               />
@@ -113,15 +113,15 @@ const NavBar = () => {
             animate={{ y: 0, opacity: 1, delay: .5 }}
             exit={{ y: "-100%", opacity: 1 }}
             transition={{ type: "tween", duration: 1.5, ease: "easeInOut" }}
-            className="wave fixed top-0 h-screen w-screen border-l border-neon-blue z-50 bg-primary lg:hidden"
+            className="wave fixed top-0 h-screen w-full border-l border-neon-blue z-50 bg-primary md:hidden"
             
           >
             <div className="flex justify-end p-4">
               <button onClick={() => setIsMenuOpen(false)}>
                 <img
-                  src="/src/assets/waterdrop.svg"
+                  src="/images/waterdrop.svg"
                   alt="Close Menu"
-                  className="w-8 h-8 cursor-pointer"
+                  className="w-8 h-8 cursor-pointer "
                 />
               </button>
             </div>

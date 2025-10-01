@@ -33,7 +33,7 @@ const PageLayout = ({title, children, backgroundSvg = true, svgProps = {}, conta
         initial={{ opacity: 0 }}
         animate={{ opacity: defaultSvgProps.opacity }}
         transition={{ duration: 1, delay: 0.5 }}
-        className='absolute top-0 left-0 w-full h-full flex items-center justify-center pointer-events-none'
+        className='absolute top-0 left-0 w-full h-full flex items-center justify-center pointer-events-none scale-50 md:scale-95 lg:scale-100'
         >
         <FullSvg {...defaultSvgProps} />
         </motion.div>

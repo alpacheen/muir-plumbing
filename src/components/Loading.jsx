@@ -30,10 +30,10 @@ const Loading = () => {
             transition={{ duration: 0.8, delay: 3.1 }}
             className="space-x-4 text-lg font-carter-one"
           >
-            <button className="bg-secondary text-black px-8 py-4 rounded-lg font-semibold hover:bg-amber-100 transition-colors ">
+            <button className="btn-primary">
               Get Quote
             </button>
-            <button className="border border-[#09D5FE] text-[#09D5FE] px-8 py-4 rounded-lg font-semibold hover:bg-[#09D5FE] hover:text-primary transition-colors ">
+            <button className="btn-secondary">
               Emergency Service
             </button>
           </motion.div>

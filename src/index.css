@@ -269,9 +269,9 @@ html {
   --R: calc(var(--size)*sqrt(var(--m)*var(--m) + 1));
 
   mask:
-    radial-gradient(var(--R) at 50% calc(100% - (var(--size) + var(--p))), #000 99%, #0000 101%)
+    radial-gradient(var(--R) at 50% calc(100% - (var(--size) + var(--p))), #000 100%, #0000 101%)
       calc(50% - 2 * var(--size)) 0/calc(4 * var(--size)) 100%,
-    radial-gradient(var(--R) at 50% calc(100% + var(--p)), #0000 99%, #000 101%) 
+    radial-gradient(var(--R) at 50% calc(100% + var(--p)), #0000 100%, #000 101%) 
       50% calc(100% - var(--size)) / calc(4 * var(--size)) 100% repeat-x;
       /* --mask:
     radial-gradient(58.31px at 80px 50%,#000 99%,#0000 101%) 0 calc(50% - 100px)/100% 200px,
@@ -280,5 +280,6 @@ html {
           mask: var(--mask); */
   background: linear-gradient(360deg, var(--color-secondary),var(--color-primary));
   height: screen;
+  width: full;
 
 }

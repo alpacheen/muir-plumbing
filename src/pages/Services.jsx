@@ -35,6 +35,16 @@ const Services = () => {
               onClick={() =>
                 setOnClickIndex(onClickIndex === index ? null : index)
               }
+              role="button"
+              tabIndex={0}
+              aria-expanded={onClickIndex === index}
+              aria-controls={`service-content-${service.id}`}
+              onKeyDown={(e) => {
+                if(e.key === 'Enter' || e.key === ' '){
+                  e.preventDefault();
+                  setOnClickIndex(onClickIndex === index ? null : index)
+                }
+              }}
               whileHover={{ scale: 1.05 }}
               transition={{ type: "spring", stiffness: 300 }}
             >
@@ -43,6 +53,9 @@ const Services = () => {
             </motion.h2>
 
             <motion.div
+            id={`service-content-${service.id}`}
+            role="region"
+            aria-labelledby={`service-title-${service.id}`}
               initial={{ height: 0, opacity: 0 }}
               animate={
                 onClickIndex === index
@@ -79,7 +92,7 @@ const Services = () => {
               animate={{ opacity: onClickIndex === index ? 0 : 0.5 }}
             >
               <img
-                src="src/assets/waterdrop.svg"
+                src="images/waterdrop.svg"
                 alt="expand service details"
                 className="w-6 h-6 brightness-0"
               />
