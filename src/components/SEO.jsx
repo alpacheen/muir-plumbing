@@ -6,6 +6,7 @@ const SEO = ({
   keywords = "plumber, emergency plumber, plumbing services, residential plumbing, commercial plumbing",
   canonical = window.location.href,
 }) => {
+    return (
   <Helmet>
     <title>{title}</title>
     <meta name="description" content={description} />
@@ -38,7 +39,8 @@ const SEO = ({
         priceRange: "$$",
       })}
     </script>
-  </Helmet>;
+  </Helmet>
+    );
 };
 
 export default SEO
